@@ -1,0 +1,17 @@
+#!/bin/bash
+
+## directories and their contents ##
+
+# remove dirs with binaries (rust)
+rm -rfv rust/*/target
+
+# remove downloadable git repositories
+rm -rfv */livsdiary/{*,.*} godot/*/godot-headers/{*,.*} godot/*/godot-cpp/{*,.*} godot/OpenSC4/{*,.*} godot/LibreCity/{*,.*} shell/scripts/{*,.*}
+
+# godot clean up
+rm -rfv godot/*/.import godot/*/*.import godot/*/*/*.import godot/*/*/*/*.import
+
+## single files, please use .o extention for compiled binaries ##
+
+# remove binaries
+rm -fv */*/{*.out,*.o,*.exe,*.so,*.os,*.bin} */*/*/{*.out,*.o,*.exe,*.so,*.os,*.bin} */*/*/*/{*.out,*.o,*.exe,*.so,*.os,*.bin}
