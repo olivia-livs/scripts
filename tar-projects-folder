@@ -1,0 +1,3 @@
+#!/bin/bash
+
+tar -zcf projects.tar.gz ../projects
