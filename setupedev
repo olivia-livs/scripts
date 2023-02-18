@@ -1,0 +1,7 @@
+#!/bin/bash
+# intended to be run from an unused tty as root, sets up my encrypted drive in /home/olivia
+
+cryptsetup luksOpen /dev/nvme0n1p5 nvme0n1p5_encrypted
+mount /dev/mapper/nvme0n1p5_encrypted /home/olivia
+chown -R olivia:olivia /home/olivia
+chmod 700 /home/olivia

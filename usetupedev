@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# unmounts and unmaps encrypted partition
+
+# be careful, fuser could lead to data loss
+fuser -k /home/olivia
+umount /dev/mapper/nvme0n1p5_encrypted
+cryptsetup close nvme0n1p5_encrypted
